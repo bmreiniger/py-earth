@@ -103,7 +103,7 @@ cdef class Householder:
     def alloc(cls, int m, int max_n, FLOAT_t zero_tol):
         cdef int k = 0
         cdef FLOAT_t[::1, :] V = np.empty(shape=(m, max_n), dtype=FLOAT, order='F')
-        cdef FLOAT_t[::1, :] T = np.empty(shape=(max_n, max_n), dtype=FLOAT, order='F')
+        cdef FLOAT_t[::1, :] T = np.zeros(shape=(max_n, max_n), dtype=FLOAT, order='F')
         cdef FLOAT_t[::1] tau = np.empty(shape=max_n, dtype=FLOAT, order='F')
         cdef FLOAT_t[::1] beta = np.empty(shape=max_n, dtype=FLOAT, order='F')
         cdef FLOAT_t[::1, :] work = np.empty(shape=(m, max_n), dtype=FLOAT, order='F')
