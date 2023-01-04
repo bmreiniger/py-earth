@@ -117,7 +117,7 @@ cdef class ForwardPasser:
         if self.endspan < 0:
             self.endspan = round(3 - log2(self.endspan_alpha / self.n))
         
-        self.linear_variables = np.zeros(shape=self.n, dtype=INT)
+        self.linear_variables = np.zeros(shape=self.n, dtype=np.int_)
         self.init_linear_variables()
         
         # Removed in favor of new knot search code
@@ -163,7 +163,7 @@ cdef class ForwardPasser:
 
     cpdef init_linear_variables(ForwardPasser self):
         cdef INDEX_t variable
-        cdef cnp.ndarray[INT_t, ndim = 1] order
+        cdef cnp.ndarray[INDEX_t, ndim = 1] order
         cdef cnp.ndarray[INT_t, ndim = 1] linear_variables = (
             <cnp.ndarray[INT_t, ndim = 1] > self.linear_variables)
         cdef cnp.ndarray[FLOAT_t, ndim = 2] B = (

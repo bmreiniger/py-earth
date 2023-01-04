@@ -1688,6 +1688,7 @@ int __pyx_module_is_main_pyearth___types = 0;
 static PyObject *__pyx_builtin_ImportError;
 static const char __pyx_k_np[] = "np";
 static const char __pyx_k_INT[] = "INT";
+static const char __pyx_k_int[] = "int_";
 static const char __pyx_k_BOOL[] = "BOOL";
 static const char __pyx_k_intp[] = "intp";
 static const char __pyx_k_main[] = "__main__";
@@ -1695,7 +1696,6 @@ static const char __pyx_k_name[] = "__name__";
 static const char __pyx_k_test[] = "__test__";
 static const char __pyx_k_FLOAT[] = "FLOAT";
 static const char __pyx_k_INDEX[] = "INDEX";
-static const char __pyx_k_int64[] = "int64";
 static const char __pyx_k_numpy[] = "numpy";
 static const char __pyx_k_uint8[] = "uint8";
 static const char __pyx_k_import[] = "__import__";
@@ -1712,7 +1712,7 @@ static PyObject *__pyx_n_s_ImportError;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_float64;
 static PyObject *__pyx_n_s_import;
-static PyObject *__pyx_n_s_int64;
+static PyObject *__pyx_n_s_int;
 static PyObject *__pyx_n_s_intp;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_name;
@@ -2797,7 +2797,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_float64, __pyx_k_float64, sizeof(__pyx_k_float64), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
-  {&__pyx_n_s_int64, __pyx_k_int64, sizeof(__pyx_k_int64), 0, 0, 1, 1},
+  {&__pyx_n_s_int, __pyx_k_int, sizeof(__pyx_k_int), 0, 0, 1, 1},
   {&__pyx_n_s_intp, __pyx_k_intp, sizeof(__pyx_k_intp), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
@@ -3175,7 +3175,7 @@ if (!__Pyx_RefNanny) {
   /* "pyearth/_types.pyx":1
  * import numpy as np             # <<<<<<<<<<<<<<
  * FLOAT = np.float64
- * INT = np.int64
+ * INT = np.int_
  */
   __pyx_t_1 = __Pyx_Import(__pyx_n_s_numpy, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -3185,7 +3185,7 @@ if (!__Pyx_RefNanny) {
   /* "pyearth/_types.pyx":2
  * import numpy as np
  * FLOAT = np.float64             # <<<<<<<<<<<<<<
- * INT = np.int64
+ * INT = np.int_
  * INDEX = np.intp
  */
   __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 2, __pyx_L1_error)
@@ -3199,13 +3199,13 @@ if (!__Pyx_RefNanny) {
   /* "pyearth/_types.pyx":3
  * import numpy as np
  * FLOAT = np.float64
- * INT = np.int64             # <<<<<<<<<<<<<<
+ * INT = np.int_             # <<<<<<<<<<<<<<
  * INDEX = np.intp
  * BOOL = np.uint8
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_int64); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_int); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_INT, __pyx_t_1) < 0) __PYX_ERR(1, 3, __pyx_L1_error)
@@ -3213,7 +3213,7 @@ if (!__Pyx_RefNanny) {
 
   /* "pyearth/_types.pyx":4
  * FLOAT = np.float64
- * INT = np.int64
+ * INT = np.int_
  * INDEX = np.intp             # <<<<<<<<<<<<<<
  * BOOL = np.uint8
  */
@@ -3226,7 +3226,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "pyearth/_types.pyx":5
- * INT = np.int64
+ * INT = np.int_
  * INDEX = np.intp
  * BOOL = np.uint8             # <<<<<<<<<<<<<<
  */
@@ -3241,7 +3241,7 @@ if (!__Pyx_RefNanny) {
   /* "pyearth/_types.pyx":1
  * import numpy as np             # <<<<<<<<<<<<<<
  * FLOAT = np.float64
- * INT = np.int64
+ * INT = np.int_
  */
   __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);

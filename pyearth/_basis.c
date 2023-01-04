@@ -2982,6 +2982,7 @@ static const char __pyx_k_np[] = "np";
 static const char __pyx_k_PY2[] = "PY2";
 static const char __pyx_k_get[] = "get";
 static const char __pyx_k_idx[] = "idx";
+static const char __pyx_k_int[] = "int_";
 static const char __pyx_k_key[] = "key";
 static const char __pyx_k_len[] = "__len__";
 static const char __pyx_k_max[] = "max";
@@ -3225,6 +3226,7 @@ static PyObject *__pyx_n_s_has_linear;
 static PyObject *__pyx_n_s_id;
 static PyObject *__pyx_n_s_idx;
 static PyObject *__pyx_n_s_import;
+static PyObject *__pyx_n_s_int;
 static PyObject *__pyx_n_s_is_prunable;
 static PyObject *__pyx_n_s_is_pruned;
 static PyObject *__pyx_n_s_is_splittable;
@@ -10018,7 +10020,7 @@ static PyArrayObject *__pyx_f_7pyearth_6_basis_13BasisFunction_valid_knots(struc
   /* "pyearth/_basis.pyx":330
  * 
  *         # Create result array and return
- *         result = np.empty(shape=count, dtype=int)             # <<<<<<<<<<<<<<
+ *         result = np.empty(shape=count, dtype=np.int_)             # <<<<<<<<<<<<<<
  *         j = 0
  *         for i in range(m):
  */
@@ -10033,13 +10035,19 @@ static PyArrayObject *__pyx_f_7pyearth_6_basis_13BasisFunction_valid_knots(struc
   __Pyx_GOTREF(__pyx_t_9);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_shape, __pyx_t_9) < 0) __PYX_ERR(0, 330, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, ((PyObject *)(&PyInt_Type))) < 0) __PYX_ERR(0, 330, __pyx_L1_error)
-  __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 330, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_np); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 330, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
+  __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_int); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 330, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_12);
+  __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_12) < 0) __PYX_ERR(0, 330, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+  __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 330, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_12);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_9) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_9, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 330, __pyx_L1_error)
-  __pyx_t_21 = ((PyArrayObject *)__pyx_t_9);
+  if (!(likely(((__pyx_t_12) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_12, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 330, __pyx_L1_error)
+  __pyx_t_21 = ((PyArrayObject *)__pyx_t_12);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_result.rcbuffer->pybuffer);
@@ -10058,12 +10066,12 @@ static PyArrayObject *__pyx_f_7pyearth_6_basis_13BasisFunction_valid_knots(struc
     if (unlikely(__pyx_t_11 < 0)) __PYX_ERR(0, 330, __pyx_L1_error)
   }
   __pyx_t_21 = 0;
-  __pyx_v_result = ((PyArrayObject *)__pyx_t_9);
-  __pyx_t_9 = 0;
+  __pyx_v_result = ((PyArrayObject *)__pyx_t_12);
+  __pyx_t_12 = 0;
 
   /* "pyearth/_basis.pyx":331
  *         # Create result array and return
- *         result = np.empty(shape=count, dtype=int)
+ *         result = np.empty(shape=count, dtype=np.int_)
  *         j = 0             # <<<<<<<<<<<<<<
  *         for i in range(m):
  *             if workspace[i]:
@@ -10071,7 +10079,7 @@ static PyArrayObject *__pyx_f_7pyearth_6_basis_13BasisFunction_valid_knots(struc
   __pyx_v_j = 0;
 
   /* "pyearth/_basis.pyx":332
- *         result = np.empty(shape=count, dtype=int)
+ *         result = np.empty(shape=count, dtype=np.int_)
  *         j = 0
  *         for i in range(m):             # <<<<<<<<<<<<<<
  *             if workspace[i]:
@@ -33862,6 +33870,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_id, __pyx_k_id, sizeof(__pyx_k_id), 0, 0, 1, 1},
   {&__pyx_n_s_idx, __pyx_k_idx, sizeof(__pyx_k_idx), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
+  {&__pyx_n_s_int, __pyx_k_int, sizeof(__pyx_k_int), 0, 0, 1, 1},
   {&__pyx_n_s_is_prunable, __pyx_k_is_prunable, sizeof(__pyx_k_is_prunable), 0, 0, 1, 1},
   {&__pyx_n_s_is_pruned, __pyx_k_is_pruned, sizeof(__pyx_k_is_pruned), 0, 0, 1, 1},
   {&__pyx_n_s_is_splittable, __pyx_k_is_splittable, sizeof(__pyx_k_is_splittable), 0, 0, 1, 1},

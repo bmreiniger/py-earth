@@ -327,7 +327,7 @@ cdef class BasisFunction:
                     break
 
         # Create result array and return
-        result = np.empty(shape=count, dtype=int)
+        result = np.empty(shape=count, dtype=np.int_)
         j = 0
         for i in range(m):
             if workspace[i]:
