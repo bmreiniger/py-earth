@@ -9,7 +9,7 @@ from ._basis cimport (Basis, BasisFunction, ConstantBasisFunction,
                       HingeBasisFunction, LinearBasisFunction, 
                       MissingnessBasisFunction)
 from ._record cimport ForwardPassIteration
-from ._types import BOOL, INDEX, INT
+from ._types import BOOL, FLOAT, INDEX, INT
 from ._knot_search cimport knot_search, MultipleOutcomeDependentData, PredictorDependentData, \
     KnotSearchReadOnlyData, KnotSearchState, KnotSearchWorkingData, KnotSearchData
 import sys
@@ -111,7 +111,7 @@ cdef class ForwardPasser:
         self.mwork = np.empty(shape=self.m, dtype=INT)
         
         self.B = np.ones(
-            shape=(self.m, self.max_terms + 4), order='F', dtype=np.float)
+            shape=(self.m, self.max_terms + 4), order='F', dtype=FLOAT)
         self.basis.transform(self.X, self.missing, self.B[:,0:1])
         
         if self.endspan < 0:
