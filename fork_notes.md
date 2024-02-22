@@ -8,7 +8,7 @@ and this seems easier to revert things as I go (sorry!).
 
 Changes
 -------
-nosetest is [also abandoned](https://github.com/nose-devs/nose/issues/1099).  Moving to pytest (TODO: not completely moved).
+nosetest is [also abandoned](https://github.com/nose-devs/nose/issues/1099).  Moving to pytest (**TODO**: not completely moved).
 
 Installation required rebuilding .pyx files to .c using a current cython.
 For some reason I couldn't get it to do all of them at once; luckily there aren't many to do manually:
@@ -27,6 +27,11 @@ if so, then we should set them to zero -- I've initialized the T array as zeros 
 if not, then we could just modify the test to ignore below-diagonal entires -- this would be faster, but for safety I've assumed the former.
 
 `test_earth.py::test_output_weight` fails when I run the whole test suite, but not when I run it individually...
-...some race condition???  **TODO**
+...some race condition???  random state??  **TODO**
 
 While developing, I need to run `make inplace` to rebuild between tests. I'm newish to cython; is this standard, or is there a slicker way?
+
+----
+
+For python 3.12, `versioneer.py` threw an error, see e.g. https://docs.python.org/3/whatsnew/3.12.html#configparser.
+(Since the relevant deprecation happened all the way back in 3.2, I just made the change in the same branch here.)
