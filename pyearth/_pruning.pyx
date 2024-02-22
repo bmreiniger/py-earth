@@ -6,6 +6,7 @@
 
 from ._record cimport PruningPassIteration
 from ._types import FLOAT
+from ._types cimport FLOAT_t, BOOL_t, INDEX_t
 from ._util cimport gcv, apply_weights_2d
 import numpy as np
 from scipy.linalg import lstsq

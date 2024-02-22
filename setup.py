@@ -21,7 +21,14 @@ def get_ext_modules():
         from Cython.Build import cythonize
         ext_modules = cythonize(
             [Extension(
-                "pyearth._util", ["pyearth/_util.pyx"], include_dirs=[numpy_inc]),
+                 "pyearth._types",
+                 ["pyearth/_types.pyx"],
+                 include_dirs=[local_inc,
+                               numpy_inc]),
+             Extension(
+                "pyearth._util",
+                ["pyearth/_util.pyx"],
+                include_dirs=[numpy_inc]),
              Extension(
                  "pyearth._basis",
                  ["pyearth/_basis.pyx"],
@@ -50,11 +57,6 @@ def get_ext_modules():
                  ["pyearth/_qr.pyx"],
                  include_dirs=[local_inc,
                                numpy_inc]),
-             Extension(
-                 "pyearth._types",
-                 ["pyearth/_types.pyx"],
-                 include_dirs=[local_inc,
-                               numpy_inc])
              ])
     else:
         ext_modules = [Extension(

@@ -5,7 +5,9 @@
 # cython: profile = False
 
 import numpy as np
+cimport numpy as cnp
 from libc.math cimport sqrt, log
+from ._types cimport FLOAT_t, INDEX_t
 
 cdef FLOAT_t log2(FLOAT_t x):
     return log(x) / log(2.0)

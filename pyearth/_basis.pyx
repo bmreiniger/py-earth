@@ -5,11 +5,13 @@
 # cython: profile = False
 
 from ._util cimport log2, apply_weights_2d
+from ._types cimport FLOAT_t, INT_t, INDEX_t, BOOL_t
+from ._types import FLOAT
 from libc.math cimport log
 from libc.math cimport abs
 cimport cython
 cdef FLOAT_t ZERO_TOL = 1e-16
-from _types import FLOAT
+# from ._types import FLOAT
 import numpy as np
 import sys
 import six

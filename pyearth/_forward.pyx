@@ -10,6 +10,7 @@ from ._basis cimport (Basis, BasisFunction, ConstantBasisFunction,
                       MissingnessBasisFunction)
 from ._record cimport ForwardPassIteration
 from ._types import BOOL, FLOAT, INDEX, INT
+from ._types cimport BOOL_t, FLOAT_t, INDEX_t, INT_t
 from ._knot_search cimport knot_search, MultipleOutcomeDependentData, PredictorDependentData, \
     KnotSearchReadOnlyData, KnotSearchState, KnotSearchWorkingData, KnotSearchData
 import sys
