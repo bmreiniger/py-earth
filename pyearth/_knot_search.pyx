@@ -9,7 +9,7 @@ import scipy as sp
 from libc.math cimport sqrt
 from libc.math cimport log
 cimport numpy as cnp
-from _types import INDEX, FLOAT
+from ._types import INDEX, FLOAT
 from ._types cimport INDEX_t, FLOAT_t
 from ._util cimport log2
 
